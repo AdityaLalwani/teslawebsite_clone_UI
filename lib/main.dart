@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               alignment: Alignment.bottomCenter,
-              margin: EdgeInsets.only(bottom: 20),
+              margin: EdgeInsets.only(bottom: 5),
               child: TabsController(controller),
             ),
             Container(
@@ -196,7 +196,7 @@ class TabsControllerState extends State<TabsController> {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(4.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -316,24 +316,11 @@ class Springbutton extends StatelessWidget {
       Container(
         height: height,
         width: width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.0),
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 13.0,
-              color: Colors.black.withOpacity(.5),
-              offset: Offset(6.0, 7.0),
-            ),
-          ],
-          //shape: BoxShape.rectangle,
-          //border: Border.all(),
-          color: Colors.redAccent,
-        ),
         child: Center(
           child: Text(
             "$text",
             style: TextStyle(
-              color: Colors.white.withOpacity(0.87),
+              color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 18.0,
             ),

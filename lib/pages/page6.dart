@@ -8,6 +8,7 @@ class Page6 extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
+          color: Colors.black,
           image: DecorationImage(
               image: AssetImage("assets/images/6.png"), fit: BoxFit.cover)),
       child: Column(

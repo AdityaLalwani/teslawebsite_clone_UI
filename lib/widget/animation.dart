@@ -20,7 +20,7 @@ class _AnimatedCircularGlowState extends State<AnimatedCircularGlow>
 
     controller =
         AnimationController(vsync: this, duration: Duration(seconds: 2));
-    animation = Tween<double>(begin: 120, end: 50)
+    animation = Tween<double>(begin: 30, end: 0)
         .chain(CurveTween(curve: Curves.ease))
         .animate(controller)
           ..addListener(() {

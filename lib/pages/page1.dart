@@ -19,7 +19,7 @@ class _Page1State extends State<Page1> {
 
     super.initState();
     Timer(
-        Duration(seconds: 2),
+        Duration(milliseconds: 1500),
         () => setState(() {
               _visible = !_visible;
             }));
@@ -51,101 +51,98 @@ class _Page1State extends State<Page1> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 53,
+                    height: 153,
                   ),
-                  Text(
-                    "SOLAR ROOF",
-                    style: TextStyle(color: Colors.white),
+                  InkWell(
+                    onTap: () {
+                      Page1();
+                    },
+                    child: Text(
+                      "SOLAR ROOF",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
-          AnimatedCircularGlow(
-            child: Container(
-              alignment: Alignment.bottomCenter,
-              margin: EdgeInsets.all(8),
-              child: Column(
+          SizedBox(
+            height: 225,
+          ),
+          Text(
+            "Premium tile with solar power for your home",
+            style: TextStyle(color: Colors.white, fontSize: 16),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 60,
+              ),
+              Column(
                 children: [
                   Text(
-                    "Premium tile with solar power for your home",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    "Sol",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Sol",
-                            style: TextStyle(color: Colors.white, fontSize: 20),
-                          ),
-                          Text(
-                            "Beautiful Solar",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 13.5),
-                          ),
-                          Text(
-                            "No Compromise",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 13.5),
-                          ),
-                        ],
-                      ),
-                      Vr(),
-                      Column(
-                        children: [
-                          Text(
-                            "3X",
-                            style: TextStyle(color: Colors.white, fontSize: 35),
-                          ),
-                          Text(
-                            "Stronger Than",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 13.5),
-                          ),
-                          Text(
-                            "Standard Roofing Tiles",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 13.5),
-                          ),
-                        ],
-                      ),
-                      Vr(),
-                      Column(
-                        children: [
-                          Text(
-                            "24/7",
-                            style: TextStyle(color: Colors.white, fontSize: 35),
-                          ),
-                          Text(
-                            "Energy Monitoring",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 13.5),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        width: 25,
-                      ),
-                      RaisedButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.white, width: 3.5)),
-                        onPressed: () {},
-                        color: Colors.transparent,
-                        textColor: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Text("      ORDER NOW      ".toUpperCase(),
-                              style: TextStyle(fontSize: 12)),
-                        ),
-                      ),
-                    ],
+                  Text(
+                    "Beautiful Solar",
+                    style: TextStyle(color: Colors.white, fontSize: 13.5),
+                  ),
+                  Text(
+                    "No Compromise",
+                    style: TextStyle(color: Colors.white, fontSize: 13.5),
                   ),
                 ],
               ),
-            ),
+              Vr(),
+              Column(
+                children: [
+                  Text(
+                    "3X",
+                    style: TextStyle(color: Colors.white, fontSize: 35),
+                  ),
+                  Text(
+                    "Stronger Than",
+                    style: TextStyle(color: Colors.white, fontSize: 13.5),
+                  ),
+                  Text(
+                    "Standard Roofing Tiles",
+                    style: TextStyle(color: Colors.white, fontSize: 13.5),
+                  ),
+                ],
+              ),
+              Vr(),
+              Column(
+                children: [
+                  Text(
+                    "24/7",
+                    style: TextStyle(color: Colors.white, fontSize: 35),
+                  ),
+                  Text(
+                    "Energy Monitoring",
+                    style: TextStyle(color: Colors.white, fontSize: 13.5),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 45,
+              ),
+              RaisedButton(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.white, width: 3.5)),
+                onPressed: () {},
+                color: Colors.transparent,
+                textColor: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text("     ORDER NOW     ".toUpperCase(),
+                      style: TextStyle(fontSize: 12)),
+                ),
+              ),
+            ],
           ),
         ],
       ),
